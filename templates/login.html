@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="auth-container d-flex flex-column align-items-center">
+    <div class="auth-card bg-white border p-5 text-center" style="width: 350px;">
+        <h1 style="font-family: 'Grand Hotel', cursive; font-size: 3.5rem; margin-bottom: 30px;">InstaBeam</h1>
+        
+        <form method="POST">
+            <div class="mb-2">
+                <input type="text" name="username" class="form-control bg-light border" placeholder="Username" required>
+            </div>
+            
+            <div class="mb-2">
+                <input type="password" name="password" class="form-control bg-light border" placeholder="Password" required>
+            </div>
+
+            <div class="mb-3">
+                <select name="role" class="form-select bg-light text-muted border" style="font-size: 13px;" required>
+                    <option value="" disabled selected>Select Login Role</option>
+                    <option value="consumer">Consumer</option>
+                    <option value="creator">Creator</option>
+                </select>
+                <div class="form-text text-start mt-1" style="font-size: 10px;">Select the role you registered with.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 fw-bold py-1">Log In</button>
+        </form>
+
+        <div class="d-flex align-items-center my-4">
+            <div class="border-bottom flex-grow-1"></div>
+            <span class="mx-3 text-muted fw-bold small">OR</span>
+            <div class="border-bottom flex-grow-1"></div>
+        </div>
+        
+        <a href="#" class="text-primary fw-bold text-decoration-none small">Forgot password?</a>
+    </div>
+    
+    <div class="auth-card bg-white border mt-3 py-3 text-center" style="width: 350px;">
+        <p class="text-sm mb-0">Don't have an account? <a href="{{ url_for('register') }}" class="fw-bold text-primary text-decoration-none">Sign up</a></p>
+    </div>
+</div>
+{% endblock %}

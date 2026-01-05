@@ -1,0 +1,147 @@
+/* =========================================================
+   CloudCapture – OPULENCE (Gold & Silver Edition)
+   ========================================================= */
+
+/* ---------- ROOT VARIABLES & GRADIENTS ---------- */
+:root {
+    /* The Metallic Gold Gradient */
+    --gold-text: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    --gold-bg: linear-gradient(135deg, #BF953F, #B38728, #AA771C);
+    
+    /* The Metallic Silver Gradient */
+    --silver-text: linear-gradient(to right, #cfd9df, #e2ebf0, #a1c4fd);
+    --silver-border: rgba(255, 255, 255, 0.2);
+
+    /* Backgrounds */
+    --dark-deep: #050505;
+    --dark-card: rgba(20, 20, 20, 0.85); /* Glassy Black */
+    --text-main: #e2e2e2;
+}
+
+/* ---------- GLOBAL BODY ---------- */
+body {
+    background-color: var(--dark-deep) !important;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(191, 149, 63, 0.08), transparent 25%), 
+        radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.05), transparent 25%);
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    min-height: 100vh;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* ---------- TYPOGRAPHY (THE GOLD EFFECT) ---------- */
+h1, h2, h3, h4, .navbar-brand, .brand-text {
+    background: var(--gold-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid #333 !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    color: #b0b0b0 !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: var(--gold-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+/* ---------- CARDS (GLASS ONYX) ---------- */
+.auth-card, .card, .post-card {
+    background: var(--dark-card) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--silver-border) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8) !important;
+    color: white;
+}
+
+/* Hover effect for cards */
+.post-card:hover, .card:hover {
+    border-color: #BF953F !important; /* Turn border gold on hover */
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
+}
+
+/* ---------- INPUTS (Dark Mode) ---------- */
+input, select, textarea, .form-control {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid #444 !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+}
+
+input:focus, select:focus, .form-control:focus {
+    border-color: #BF953F !important;
+    box-shadow: 0 0 15px rgba(191, 149, 63, 0.3) !important;
+}
+
+input::placeholder {
+    color: #888 !important;
+}
+
+/* ---------- BUTTONS (GOLD BARS) ---------- */
+.btn-primary {
+    background: var(--gold-bg) !important;
+    border: none !important;
+    color: #000 !important; /* Black text on gold for contrast */
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px !important;
+    padding: 10px 25px;
+    box-shadow: 0 10px 20px rgba(191, 149, 63, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    color: #fff !important; /* Text turns white */
+}
+
+/* Secondary Button (Silver Outline) */
+.btn-outline-light, .btn-secondary {
+    background: transparent !important;
+    border: 1px solid #cfd9df !important;
+    color: #cfd9df !important;
+    border-radius: 50px !important;
+}
+
+.btn-outline-light:hover {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* ---------- DROPDOWNS ---------- */
+.dropdown-menu {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333;
+}
+.dropdown-item {
+    color: #ccc !important;
+}
+.dropdown-item:hover {
+    background-color: #333 !important;
+    color: #BF953F !important;
+}
+
+/* ---------- ALERTS ---------- */
+.alert {
+    background: rgba(191, 149, 63, 0.15);
+    border: 1px solid #BF953F;
+    color: #FCF6BA;
+}
